@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+ <title> About Production Automation</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <ol>
+    <a href="index.html">About Production Automation</a>
+    <li><strong><a href="PLC.html"> PLC </a></strong></li>
+    <li><strong><a href="개발자일지.html"> 개발자일지 </a></strong></li>
+  </ol>
+<h1>PLC</h1>
+<h2> &emsp; 버퍼메모리  </h2>
+<ul>
+
+<h4>FROM 명령어</h4>
+  <li>K800+100n = 현재위치</li>
+  <li>K809+100n = 축 동작상태</li>
+  <li>K816+100n = 외부입력신호</li><details><summary>더보기</summary>
+                <p>B0: 하한 리미트 신호</p>
+                <p>B1: 상한 리미트 신호</p>
+                <p>B2: 미사용</p>
+                <p>B3: 정지 신호</p>
+                <p>B4: 외부 지령 신호/전환 신호</p>
+                <p>B5: 미사용</p>
+                <p>B6: 근점 도그 신호</p>
+                <p>B7: 미사용</p>
+</details>
+ <li>K817+100n = STATUS</li><details><summary>더보기</summary>
+                <p>B0: 속도재어중 플래그</p>
+                <p>B1: 속도/위치 전환 래치 플래그</p>
+                <p>B2: 지령 인포지션 플래그</p>
+                <p>B3: 원점복귀 요구 플래그</p>
+                <p>B4: 원점복귀 완료 플래그</p>
+                <p>B5: 위치/속도 전환 래치 플래그</p>
+                <p>B9: 축 경고 검출</p>
+                <p>B10: 속도 변경 0 플래그</p>
+</details>
+<h4>TO 명령어</h4>
+<li>K1500+100n = 위치결정기동번호</li><details><summary>더보기</summary>
+<p>1~600 : 위치결정 데이터 NO.
+<p>9001 : 기계 원점 복귀
+<p>-----------------[TO H0 K1500 K9001 K1]
+<p>= 기계 원점 복귀 명령
+<p>-----------------[TOP H0 K1500 K1 K1]
+<p>= 1번 POSITION START 명령
+</details>
+<li>K2004+6000n =  지령 속도</li><details><summary>더보기</summary>
+  <p>-----------------[TOP H0 K2004 D300 K2]  (D300 = 속도값)
+                   <p>= D300의 속도값을 지령 명령
+</details>
+<li>K2006+6000n = 위치결정어드레스/이동량</li><details><summary>더보기</summary>
+<p>----------------[TOP H0 K2006 D310 K2]  (D310 = 위치값)
+                <p>  = D310의 위치값을 지령 명령
+</details>
+
+
+
+
+
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
