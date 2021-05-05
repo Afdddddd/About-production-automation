@@ -1,41 +1,87 @@
 <!doctype html>
 <html>
 <head>
- <title>  About Production Automation </title>
+ <title> About Automatic Control </title>
   <meta charset="utf-8">
+  <style>
+  a{
+    color:black;
+    text-decoration:none;
+  }
+  h2{
+    font-size:30px;
+  }
+  </style>
+
 </head>
 
 <body>
 
+
+    <h2><a href="PLC.html">PLC</a> >> 명령어</h2>
   <ol>
-    <a href="index.html">About Production Automation</a>
     <li><strong><a href="PLC.html"> PLC </a></strong></li>
-    <li><strong><a href="개발자일지.html"> 개발자일지 </a></strong></li>
+    <li><strong><a href="SERVO MOTOR.html"> SERVO MOTOR </a></strong></li>
+    <li><strong><a href="HMI.html"> HMI </a></strong></li>
+    <li><strong><a href="개발일지.html"> 개발일지 </a></strong></li>
   </ol>
-<h1>PLC</h1>
-<h2> &emsp; 명령어 </h2>
+
 <ul>
+<h3><li>명령어 </li></h3>
   <details>
-   <summary>BSFL(P),BSFR(P)</summary>
-    <p>[BSFL(P) (D) n]</p>
-    <p>(D)로 지정된 디바이스로 부터 n점의 데이터를 1비트씩 왼쪽(오른쪽)으로 시프트 시킵니다.</p>
-    <p><img src="BSFL.jpg" width="70%"></P>
-    <p>= M330 ~ M334 까지 X41이 살때마다 한번씩 산다.</P>
-    <p>&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;&nbsp;(0)&emsp;&emsp;&nbsp;(1)</P>
-    <p>M334&ensp; M333&ensp; M332&ensp; M331&ensp; M330<p>
-    <p>&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;&nbsp;(1)&emsp;&emsp;&nbsp;(0)</P>
-    <p> M334&ensp; M333&ensp; M332&ensp; M331&ensp; M330</p>
+    <summary><strong>MOV</strong></summary>
+    [MOV (D1) (D2)]<P>
+    (D1)의 데이터를 (D2)에 복사하는 명령어.<p>
+    <img src="mov명령어.jpg" width="70%"><p>
+    M1024가 ON이 되면, D20에 K1이 복사되어 D20의 데이터값이 1이 된다.<p>
+    D20의 데이터 값이 1과 같아지면서 M1025가 ON이 된다.<p>
   </details>
   <details>
-    <summary>INC(INCP/DINC) / DEC(DECP/DDEC)</summary>
+   <summary><strong>FF</strong></summary>
+    <img src="FF명령어.jpg" width="70%"><p>
+    한번 누르면 ON, 다시 한번 누르면 OFF되는 명령어.<P>
+    <img src="NOT FF명령어.jpg" width="65%"><p>
+    (FF명령어를 사용하지 않은 경우. 회로가 길어지고 복잡해진다.)<P>
+  </details>
+  <details>
+   <summary><strong>BSFL(P),BSFR(P)</strong></summary>
+    [BSFL(P) (D) n]<p>
+    (D)로 지정된 디바이스로 부터 n점의 데이터를 1비트씩 왼쪽(오른쪽)으로 시프트 시킵니다.<p>
+    <img src="BSFL.jpg" width="70%"><P>
+    M330 ~ M334 까지 X41이 ON될때마다 왼쪽으로 시프트 된다.<P>
+    &emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;&nbsp;(0)&emsp;&emsp;&nbsp;(1)<br>
+    M334&ensp; M333&ensp; M332&ensp; M331&ensp; M330<br>
+    &emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;(0)&emsp;&emsp;&nbsp;(1)&emsp;&emsp;&nbsp;(0)<br>
+     M334&ensp; M333&ensp; M332&ensp; M331&ensp; M330<p>
+  </details>
+  <details>
+    <summary><strong>INC(INCP/DINC) / DEC(DECP/DDEC)</strong></summary>
+<strong>[INCP (D)] / [DECP (D)]</strong><p>
+<strong>INC(P)</strong> : 실행지령이 ON이 되면 설정된 디바이스 영역 1씩 <u>증가</u>하는 명령어.<p>
+<strong>DEC(P)</strong> : 실행지령이 ON이 되면 설정된 디바이스 영역 1씩 <u>감소</u>하는 명령어.<p>
+<img src="incp.jpg" width="70%"><p>
+M1091이 ON되어있고, M431이 한번씩 ON되면, INCP로 인해 D24가 1씩쌓인다.<p>
+D24의 쌓인 값이 D3520의 설정한 값과 같거나 커지면 M428번이 ON이 된다.<p>
+  </details>
 
 
+<h3><li>특수릴레이 </li></h3>
 
-
-
+SM400 - 항상 ON <p>
+SM401 - 항상 OFF<p>
+SM409 - 0.01초 클록<p>
+SM410 - 0.1초 클록<p>
+SM411 - 0.2초 클록<p>
+SM412 - 1초 클록<p>
+SM413 - 2초 클록<p>
 
 
 </ul>
+
+
+
+
+
 
 
 
