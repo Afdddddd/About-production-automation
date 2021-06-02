@@ -1,29 +1,100 @@
 <!doctype html>
 <html>
+
 <head>
- <title>About Automatic Control </title>
+  <title>About Automatic Control </title>
   <meta charset="utf-8">
-  
-</head>
+  <style>
+    @media(max-width:800px) {
+      h1 {
+        height: 50%;
+      }
+    }
+
+    #nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 68%;
+      border-right: solid 1px #dee2e6;
+    }
+
+    #nav .plc {
+      color: #0067a3;
+      text-align: center;
+      padding-top: 160px;
+      font-size: 20px;
+      border-right: solid 1px #dee2e6;
+      font-weight: bold;
+    }
+
+    #nav .servomotor {
+      color: #0067a3;
+      text-align: center;
+      padding-top: 160px;
+      font-size: 20px;
+      border-right: solid 1px #dee2e6;
+      font-weight: bold;
+    }
+
+    #nav .hmi {
+      color: #0067a3;
+      text-align: center;
+      padding-top: 160px;
+      font-size: 20px;
+      border-right: solid 1px #dee2e6;
+      font-weight: bold;
+    }
+
+    #nav .daily {
+      color: #0067a3;
+      text-align: center;
+      padding-top: 160px;
+      font-size: 20px;
+      border-right: solid 1px #dee2e6;
+      font-weight: bold;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0px;
+      height: 80%;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #0067a3;
+      margin: 0px;
+      padding: 8%;
+      font-size: 50px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0067a3;
+    }
+  </style>
 
 <body>
-<h1 style=text-align:center;font-size:45px;><a href=index.html> About Automatic Control </a></h1>
-  <ol>
-    <li><strong><a href="PLC.html"> PLC </a></strong></li>
-    <li><strong><a href="SERVO MOTOR.html"> SERVO MOTOR </a></strong></li>
-    <li><strong><a href="HMI.html"> HMI </a></strong></li>
-    <li><strong><a href="개발일지.html"> 개발일지 </a></strong></li>
-
-
-
-
-
-
-  </ol>
-
-
-
-
+  <header>
+    <h1><a href="index.html" style="color:white">About Automatic Control</a></h1>
+  </header>
+  <div id="nav">
+    <div class="plc" onmouseover="document.querySelector('.plc').style.backgroundColor = '#e9ecef';" onmouseout="document.querySelector('.plc').style.backgroundColor = 'white';">
+      <a href="PLC.html">PLC</a>
+    </div>
+    <div class="servomotor" onmouseover="document.querySelector('.servomotor').style.backgroundColor = '#e9ecef';" onmouseout="document.querySelector('.servomotor').style.backgroundColor = 'white';">
+      <a href="SERVO MOTOR.html">SERVO MOTOR</a>
+    </div>
+    <div class="hmi" onmouseover="document.querySelector('.hmi').style.backgroundColor = '#e9ecef';" onmouseout="document.querySelector('.hmi').style.backgroundColor = 'white';">
+      <a href="HMI.html">HMI</a>
+    </div>
+    <div class="daily" onmouseover="document.querySelector('.daily').style.backgroundColor = '#e9ecef';" onmouseout="document.querySelector('.daily').style.backgroundColor = 'white';">
+      <a href="개발일지.html">개발일지</a>
+    </div>
+  </div>
 
 
 
@@ -31,4 +102,5 @@
 
 
 </body>
+
 </html>

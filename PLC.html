@@ -1,32 +1,73 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <title> PLC </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-</head>
-
+  <link rel="stylesheet" href="style.css" </head>
 <body>
-  <h1><a href=index.html style="color:white"> About Automatic Control </a></h1>
-  <div class="container-1">
-    <div class="main-menu" style="width:150px">
-      <div class="selected"><a href="PLC.html">  PLC  </a></div>
+  <header>
+    <h1><a href="index.html" style="color:white">About Automatic Control</a></h1>
+    <nav id="nav">
+      <div class="selected" onmouseover="document.querySelector('#nav .selected').style.backgroundColor='#e9ecef';" onmouseout="document.querySelector('#nav .selected').style.backgroundColor='white';"><a href="PLC.html">PLC</a></div>
+      <div class="nav_2" onmouseover="document.querySelector('#nav .nav_2').style.backgroundColor='#e9ecef';" onmouseout="document.querySelector('#nav .nav_2').style.backgroundColor='white';"><a href="SERVO MOTOR.html">SERVO MOTOR </a></div>
+      <div class="nav_3" onmouseover="document.querySelector('#nav .nav_3').style.backgroundColor='#e9ecef';" onmouseout="document.querySelector('#nav .nav_3').style.backgroundColor='white';"><a href="HMI.html">HMI</a></div>
+      <div class="nav_4" onmouseover="document.querySelector('#nav .nav_4').style.backgroundColor='#e9ecef';" onmouseout="document.querySelector('#nav .nav_4').style.backgroundColor='white';"><a href="개발일지.html">개발일지</a></div>
+    </nav>
+  </header>
+
+
+  <div id="article">
+    <div class="lnb">
+      <ol>
+        <li class="selected">PLC란</a></li>
+        <li class="lnb_2"><a href="프로그램작성.html">프로그램작성</a></li>
+        <li class="lnb_3"><a href="파라미터설정.html">파라미터설정</a></li>
+        <li class="lnb_4"><a href="코멘트작성.html">코멘트작성</a></li>
+      </ol>
+
     </div>
-    <div class="main-menu" style="width:150px"><a href="SERVO MOTOR.html">  SERVO MOTOR  </a></div>
-    <div class="main-menu" style="width:150px"><a href="HMI.html">&nbsp; HMI &nbsp;</a></div>
-    <div class="main-menu" style="width:150px"><a href="개발일지.html">  개발일지  </a></div>
-  </div>
-  <div class="left-menu">
-    <p style="font-weight:bold" ;>&lt; PLC &gt;</p>
-  </div>
-  <div class="content-area">
-    <h4 style="font-size:40px; font-weight:bold;">PLC란</h4>
-    <p>Programmable Logic Controller로 직역하자면 프로그램 가능한 논리 제어 장치입니다.</P>
-    <p>PLC는 공장과 같은 산업현장에서 자동 제어 및 감시를 하기 위한 제어 장치로,</p>
-    <p>스위치센서, 온도, 위치 정보 등을 입력으로 받아들인 뒤</p>
-    <p>입력된 프로그램에 의해 순차적으로 논리를 처리하고</p>
-    <p>그에 따른 출력을 기반으로 공기 실린더, 유압실린더. 진동판과 같은 외부 장치를 제어합니다.</p>
+    <div class="content">
+      <h3 class="plc란">PLC란.</h3>
+      <div class="block1">
+        <p><strong>Programmable Logic Controller</strong>로 직역하자면 프로그램 가능한 논리 제어 장치이다.</br>
+          <img src="plc.jpg" style="padding-left:150px;"><br>
+          스위치센서, 온도, 위치 정보 등을 입력으로 받아들인 뒤, 입력된 프로그램에 의해 순차적으로 논리를 처리하고</br>
+          그에 따른 출력을 기반으로 공기 실린더, 유압실린더. 진동판과 같은 외부 장치를 제어한다.
+        </p>
+        <h4 style="margin-bottom:10px;">PLC의 장점.</h4>
+        <ol style="padding-left:15px;">
+          <li style="decimal;">
+            <strong>높은 신뢰성</strong>:&ensp; PC를 사용한 제어의 경우, 프로그램 자체에서 리소스에 대한 부분을 신경써줘야 하며,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; 치명적인 버그 등이 발생하여, 중요한 부분이 오작동등으로 멈추는 경우가 발생할 수 있으나,<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; PLC의 경우에는 산업용 컨트롤러 답게, 이러한 오류가 발생할 조건이 최소화 되어 있어 몇년이<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; 지나더라도 처음과 같은 동작이 가능하다.
+          </li>
+          <li style="padding-top:10px;">
+            <strong>좋은 확장성</strong>:&ensp; PLC는 각종 산업용 기기와 연결 호환성이 좋다.
+          </li>
+          <li style="padding-top:10px;">
+            <strong>간편한 사용</strong>:&ensp; 그래픽언어인 래더를 사용해 보기 쉽고, 실시간 모니터링을 지원함으로써 매우 쉬운<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; 디버깅이 가능하다.
+          </li>
+        </ol>
+      </div>
+      <h3 class="plc프로그래밍"> PLC프로그래밍</h3>
+      <div class="block2">
+        <p>plc에는 여러가지 프로그래밍 언어를 사용하고있다.<br><br>
+          <u><strong>1. Ladder diagram(LD)</strong></u> : 릴레이 로직에 대응되는 언어 (우리가 사용하는 언어)<br>
+          <strong>2. Sequential Function Charts(SFC)</strong> : 플로우 차트와 비슷한 방식<br>
+          <strong>3. Structured Text(SF)</strong> : C와 비슷한 텍스트 방식의 프로그래밍 언어<br>
+          <strong>4. Function Block Diagram(FBD)</strong> : 블록 다이어그램을 사용하는 방식<br>
+          <strong>5. Instruction List(IL)</strong> : 어셈블리어와 비슷한 텍스트 방식의 프로그래밍 언어<br><br>
+
+
+        <p><strong>Ladder diagram(LD)</strong></p>
+        <p>래더 다이어그램은 그래픽 기반 프로그래밍 언어이다. 기호와 연결선은 필요한 논리를 프로그래밍하는 데 사용된다.</p>
+        <img src="사진2.jpg"><br>
+        <img src="사진1.jpg" width="75%"; style="padding-left:75px;">(미쓰비시)
+      </div>
+    </div>
   </div>
 
 

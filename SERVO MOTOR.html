@@ -2,26 +2,175 @@
 <html>
 
 <head>
-  <title> SERVO MOTORl </title>
+  <title> SERVO MOTOR </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+  <style>
+  @media(max-width:1200px){
+    #article .content {
+      padding-left:50px;
+      padding-right: 0px;
+    }
+  }
+  @media(max-width:800px){
+    #article .content h3{
+      font-size: 30px;
+    }
+  }
+  #nav {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    text-align: center;
+    height: 30px;
+    border-bottom: solid 1px #dee2e6;
+  }
+
+  #nav .nav_2{
+    padding-top: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-bottom: solid 1px #dee2e6;
+  }
+
+  #nav .nav_3 {
+    padding-top: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-bottom: solid 1px #dee2e6;
+  }
+
+  #nav .nav_4 {
+    padding-top: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-bottom: solid 1px #dee2e6;
+  }
+
+  #nav .selected {
+    border-bottom: solid 3px #0067a3;
+    height: 28px;
+    color: #0067a3;
+
+  }
+
+  #nav .selected a{
+    color: #0067a3;
+    font-weight: bold;
+  }
+
+  #article {
+    height: 100%;
+  }
+
+  #article .lnb {
+    background-color: #f8f9fa;
+  }
+
+  .lnb a {
+    display: block;
+  }
+
+  .lnb div {
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+  .lnb ol{
+    padding: 0px;
+    margin-top: 30px;
+  }
+
+  .lnb li {
+    padding-left: 40px;
+    font-weight: bold;
+    padding-top: 5px;
+    height: 30px;
+  }
+
+  .lnb .selected {
+    background-color: #e9ecef;
+    border-right: solid 3px #0067a3;
+    padding-top: 5px;
+  }
+
+  .content {
+    padding-left: 200px;
+    padding-top: 70px;
+    padding-right: 200px;
+  }
+
+  .content div {
+    background-color: #f8f9fa;
+    margin-left: 10px;
+    padding: 13px;
+  }
+
+  .content h3 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .lnb ol div{
+    padding-top: 0px;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0px;
+    height: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    background-color: #0067a3;
+    margin: 0px;
+    height: 60px;
+    padding-top: 8px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  #article #remote{
+    z-index: 1;
+    position: absolute;
+    border: solid;
+    height: 60px;
+    width: 60px;
+  }
+  </style>
+
 </head>
 
 <body>
-  <h1><a href=index.html style="color:white"> About Automatic Control </a></h1>
-  <div class="container-1">
-    <div class="main-menu" style="width:150px"><a href="PLC.html"> PLC </a></div>
-    <div class="main-menu" style="width:150px"><div class="selected"><a href="SERVO MOTOR.html"> SERVO MOTOR </a></div></div>
-    <div class="main-menu" style="width:150px"><a href="HMI.html"> HMI </a></div>
-    <div class="main-menu" style="width:150px"><a href="개발일지.html"> 개발일지 </a></div>
-  </div>
-  <div class="left-menu">
-    <p style="font-weight:bold" ;>&lt; SERVO MOTOR &gt;</p>
-  </div>
-  <div class="content-area">
-    <h4 style="font-size:40px; font-weight:bold;">SERVO MOTOR란</h4>
+  <header>
+    <h1><a href="index.html" style="color:white">About Automatic Control</a></h1>
+    <nav id="nav">
+      <div class="nav_2" onmouseover="document.querySelector('#nav .nav_2').style.backgroundColor='#e9ecef';"onmouseout="document.querySelector('#nav .nav_2').style.backgroundColor='white';"><a href="PLC.html">PLC</a></div>
+      <div class="selected" onmouseover="document.querySelector('#nav .selected').style.backgroundColor='#e9ecef';"onmouseout="document.querySelector('#nav .selected').style.backgroundColor='white';"><a href="SERVO MOTOR.html">SERVO MOTOR </a></div>
+      <div class="nav_3" onmouseover="document.querySelector('#nav .nav_3').style.backgroundColor='#e9ecef';"onmouseout="document.querySelector('#nav .nav_3').style.backgroundColor='white';"><a href="HMI.html">HMI</a></div>
+      <div class="nav_4" onmouseover="document.querySelector('#nav .nav_4').style.backgroundColor='#e9ecef';"onmouseout="document.querySelector('#nav .nav_4').style.backgroundColor='white';"><a href="개발일지.html">개발일지</a></div>
+    </nav>
+  </header>
+  <div id="article">
+    <aside id="remote">
+      리모컨
+    </aside>
+    <div class="content">
+      <h3>SERVO MOTOR란.</h3>
+      <div>
 
-  </div>
+      </div>
+    </div>
 
 
 
